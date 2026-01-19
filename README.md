@@ -1,6 +1,5 @@
 # Astro Baseline
-
-## A boring, production-ready Astro starter.
+A boring, production-ready Astro starter.
 
 Astro Baseline is an HTML-first starter designed for developers who want a clean foundation, not a framework demo.
 
