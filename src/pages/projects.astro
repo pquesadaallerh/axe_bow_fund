@@ -1,0 +1,25 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../content/site";
+
+const title = `Projects — ${site.name}`;
+---
+
+<Base
+  title={title}
+  description={`Projects by ${site.name}`}
+  canonicalPath="/projects"
+>
+  <article class="prose">
+    <h1>Projects</h1>
+
+    <p class="lead">
+      A short list of projects. Replace this with your real content.
+    </p>
+
+    <ul>
+      <li><strong>Project One</strong> — what it is, why it matters.</li>
+      <li><strong>Project Two</strong> — what it is, why it matters.</li>
+    </ul>
+  </article>
+</Base>

@@ -49,7 +49,7 @@ export const site: SiteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
-    { label: "Legal", href: "/legal" }
+    { label: "Projects", href: "/projects" }
   ],
   seo: {
     ogImage: "/images/og/og-default.jpg",
