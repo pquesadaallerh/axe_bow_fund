@@ -29,20 +29,18 @@ export type SiteConfig = {
 };
 
 export const site: SiteConfig = {
-  name: "Astro Baseline",
+  name: "Axe Bow Fund",
   tagline: "A boring, production-ready Astro starter.",
   description:
     "Astro Baseline is a minimal HTML-first starter with senior defaults: SEO, JSON-LD, a11y basics, and clean structure.",
-  url: import.meta.env.SITE_URL ?? "https://example.com",
+  url: import.meta.env.SITE_URL ?? "https://www.tudelft.nl/me/over/afdelingen/maritime-and-transport-technology/research/wind-assisted-ship-propulsion",
   locale: "en",
   author: {
-    name: "Your Name",
-    email: "hello@example.com",
-    url: "https://example.com",
+    name: "TU Delft WindThrust Research Program",
+    email: "wasp-me@tudelft.com",
+    url: "https://www.tudelft.nl/me/over/afdelingen/maritime-and-transport-technology/research/wind-assisted-ship-propulsion",
     socials: {
-      x: "https://x.com/yourhandle",
-      github: "https://github.com/yourhandle",
-      linkedin: "https://www.linkedin.com/in/yourhandle/"
+      linkedin: "https://www.linkedin.com/company/windthrust-tudelft/"
     }
   },
   nav: [
@@ -52,7 +50,7 @@ export const site: SiteConfig = {
     { label: "Projects", href: "/projects" }
   ],
   seo: {
-    ogImage: "/images/og/og-default.jpg",
+    ogImage: "/images/logo-bbf.png",
     robots: "index,follow",
     themeColor: "#fbfbf9"
   }

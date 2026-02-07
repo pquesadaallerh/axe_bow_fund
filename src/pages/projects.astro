@@ -3,6 +3,37 @@ import Base from "../layouts/Base.astro";
 import { site } from "../content/site";
 
 const title = `Projects — ${site.name}`;
+
+const projects = [
+  {
+    title: "WindThrust",
+    image: "/images/Concept_ResearchProgram_Logo_v1.png",
+    description:
+      `A unique interfaculty research program to develop of high-performing Wind Assisted
+       Ship Propulsion (WASP). More information:
+       <a href="https://www.tudelft.nl/me/over/afdelingen/maritime-and-transport-technology/research/wind-assisted-ship-propulsion/">here</a>.`
+  },
+  {
+    title: "Project Two",
+    image: "/images/damen-fcs-5009.jpg",
+    description:
+      `A brief description of Project One. Explain what it is, the goals, and why it matters.
+      A brief description of Project One. Explain what it is, the goals, and why it matters.
+      A brief description of Project One. Explain what it is, the goals, and why it matters.
+      A brief description of Project One. Explain what it is, the goals, and why it matters.
+      A brief description of Project One. Explain what it is, the goals, and why it matters.`
+  },
+    {
+    title: "Project Three",
+    image: "/images/damen-fcs-5009.jpg",
+    description:
+      `A brief description of Project One. Explain what it is, the goals, and why it matters.
+      A brief description of Project One. Explain what it is, the goals, and why it matters.
+      A brief description of Project One. Explain what it is, the goals, and why it matters.
+      A brief description of Project One. Explain what it is, the goals, and why it matters.
+      A brief description of Project One. Explain what it is, the goals, and why it matters.`
+  },
+];
 ---
 
 <Base
@@ -13,13 +44,67 @@ const title = `Projects — ${site.name}`;
   <article class="prose">
     <h1>Projects</h1>
 
-    <p class="lead">
-      A short list of projects. Replace this with your real content.
-    </p>
-
-    <ul>
-      <li><strong>Project One</strong> — what it is, why it matters.</li>
-      <li><strong>Project Two</strong> — what it is, why it matters.</li>
-    </ul>
+    <div class="projects-list">
+      {projects.map((project) => (
+        <article class="project-card">
+          <h2 class="project-card__title">{project.title}</h2>
+          <img
+            class="project-card__image"
+            src={project.image}
+            alt={project.title}
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="project-card__content">
+            <p class="project-card__desc" set:html={project.description}></p>
+          </div>
+        </article>
+      ))}
+    </div>
   </article>
+
+  <style>
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+      margin-top: var(--space-5);
+    }
+
+    .project-card {
+    background: var(--bg);
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid var(--border);
+    }
+
+    .project-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    }
+
+    .project-card__image {
+      width: 100%;
+      height: auto;
+      /* max-height: 300px; */
+      object-fit: cover;
+    }
+
+    .project-card__content {
+      padding: var(--space-3) var(--space-4) var(--space-4);
+    }
+
+    .project-card__title {
+      font-size: 20px;
+      margin: 0 0 var(--space-2);
+    }
+
+    .project-card__desc {
+      font-size: 15px;
+      color: var(--muted);
+      margin: 0;
+    }
+  </style>
 </Base>

@@ -17,25 +17,82 @@ const jsonLd = {
   canonicalPath="/"
   jsonLd={jsonLd}
 >
-  <article class="prose">
-    <h1>{site.tagline}</h1>
-    <p class="lead">{site.description}</p>
+  <article class="prose home">
+    <img
+      class="home__logo"
+      src="/images/logo-bbf.png"
+      alt="AXE BOW FUND logo"
+      loading="eager"
+      decoding="async"
+    />
 
-    <section class="block">
-      <h2>What this is</h2>
-      <p>
-        Astro Baseline is a boring starter: clear structure, SEO defaults, and minimal CSS.
-        No UI kit. No framework runtime.
-      </p>
-    </section>
+    <h1 class="home__title">AXE BOW FUND</h1>
 
-    <section class="block">
-      <h2>Next steps</h2>
-      <ul>
-        <li>Customize <code>src/content/site.ts</code></li>
-        <li>Adjust tokens in <code>src/styles/partials/tokens.css</code></li>
-        <li>Add your pages and components</li>
-      </ul>
+    <figure class="home__hero full-bleed" aria-label="Homepage hero image">
+      <img
+        class="home__hero-img"
+        src="/images/damen-fcs-5009.jpg"
+        alt=""
+        loading="eager"
+        decoding="async"
+      />
+    </figure>
+
+    <section class="home__partners" aria-labelledby="partners">
+      <h1 id="partners">Partners</h1>
+      <img
+      class="partners"
+      src="images/partners.png"
+      alt="partners"
+      loading="lazy"
+      decoding="async"
+      />
     </section>
   </article>
+
+  <style>
+    .home{
+      text-align: center;
+    }
+
+    .home__logo{
+      display: block;
+      margin: 0 auto var(--space-3);
+      width: min(400px, 50vw);
+      height: auto;
+    }
+
+    .home__title{
+      margin-bottom: var(--space-4);
+    }
+
+    .full-bleed {
+      width: calc(100% + var(--space-4) * 2);
+      margin-left: calc(-1 * var(--space-4));
+      margin-right: calc(-1 * var(--space-4));
+    }
+
+    .home__hero{
+      margin: 0 0 var(--space-5);
+    }
+
+    .home__hero-img{
+      display: block;
+      width: 100%;
+      height: min(56vw, 520px);
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .home__partners{
+      text-align: center;
+    }
+
+    .partners{
+      margin-top: var(--space-2);
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  </style>
 </Base>

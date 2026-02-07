@@ -9,19 +9,18 @@ const title = `Contact — ${site.name}`;
   title={title}
   description={`Contact ${site.name}`}
   canonicalPath="/contact"
-  mainCentered
 >
   <article class="prose">
     <h1>Contact</h1>
 
-    <p class="lead">
-      This site does not include a contact form by default.
-    </p>
-
-    <p>
-      If you need to get in touch, you can reach us by email:
-    </p>
-
+    <address>
+      Stichting Bijlboegfonds<br>
+      Bovenkade 7<br />
+      4797 AT Willemstad<br />
+      The Netherlands
+    </address>
+    
+    
     {site.author.email && (
       <p>
         <a href={`mailto:${site.author.email}`}>
@@ -29,9 +28,5 @@ const title = `Contact — ${site.name}`;
         </a>
       </p>
     )}
-
-    <p>
-      This keeps the baseline simple and avoids unnecessary JavaScript.
-    </p>
   </article>
 </Base>
