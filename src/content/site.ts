@@ -29,7 +29,7 @@ export type SiteConfig = {
 };
 
 export const site: SiteConfig = {
-  name: "Axe Bow Fund",
+  name: import.meta.env.SITE_NAME || "Axe Bow Fund",
   tagline: "A boring, production-ready Astro starter.",
   description:
     "Astro Baseline is a minimal HTML-first starter with senior defaults: SEO, JSON-LD, a11y basics, and clean structure.",
@@ -44,10 +44,10 @@ export const site: SiteConfig = {
     }
   },
   nav: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Projects", href: "/projects" }
+    { label: "Home", href: "index" },
+    { label: "About", href: "about" },
+    { label: "Contact", href: "contact" },
+    { label: "Projects", href: "projects" }
   ],
   seo: {
     ogImage: "/images/logo-bbf.png",
