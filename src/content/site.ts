@@ -32,7 +32,7 @@ export const site: SiteConfig = {
   name: import.meta.env.SITE_NAME || "Axe Bow Fund",
   tagline: "A boring, production-ready Astro starter.",
   description:
-    "Astro Baseline is a minimal HTML-first starter with senior defaults: SEO, JSON-LD, a11y basics, and clean structure.",
+    "Website for the Axe Bow Foundation",
   url: import.meta.env.SITE_URL ?? "https://www.tudelft.nl/me/over/afdelingen/maritime-and-transport-technology/research/wind-assisted-ship-propulsion",
   locale: "en",
   author: {
