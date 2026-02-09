@@ -44,13 +44,13 @@ export const site: SiteConfig = {
     }
   },
   nav: [
-    { label: "Home", href: "index" },
-    { label: "About", href: "about" },
-    { label: "Contact", href: "contact" },
-    { label: "Projects", href: "projects" }
+    { label: "Home", href: `${import.meta.env.BASE_URL}index` },
+    { label: "About", href: `${import.meta.env.BASE_URL}about` },
+    { label: "Contact", href: `${import.meta.env.BASE_URL}contact` },
+    { label: "Projects", href: `${import.meta.env.BASE_URL}projects` }
   ],
   seo: {
-    ogImage: "/images/logo-bbf.png",
+    ogImage: `${import.meta.env.BASE_URL}images/logo-bbf.png`,
     robots: "index,follow",
     themeColor: "#fbfbf9"
   }
