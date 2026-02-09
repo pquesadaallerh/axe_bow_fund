@@ -12,7 +12,7 @@ const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWit
 
 <header class="header">
   <div class="header__inner">
-    <a class="header__brand" href="/">{brand}</a>
+    <a class="header__brand" href={import.meta.env.BASE_URL}>{brand}</a>
 
     <nav class="header__nav" aria-label="Primary">
       <ul class="nav">
